@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def home
     following = Array.new
     for @f in current_user.following do
-      following.pusg(@f.id)
+      following.push(@f.id)
     end
     
     @posts = Post.where("user_id IN (?)", following)

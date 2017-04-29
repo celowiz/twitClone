@@ -10,13 +10,13 @@
         <span class="icon-bar"></span>
       </button>
     </div>
+    
     <img class="navbar-brand" src="/blue-bird.png">
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/home">Home </a></li>
-        <li><a href="/home">Moments </a></li>
+        <li><a href="/explore">Explore </a></li>
         <li><a href="/home">Notifications </a></li>
         <li><a href="/home">Messages </a></li>
       </ul>
@@ -28,18 +28,19 @@
             </div>
           </form>
         </li>
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="/avatar.png" class="rounded-img" height="25px" width="25px"> <span class="caret"></span></a>
+          
           <ul class="dropdown-menu">
             <li><a href="/user/<%= current_user.username %>">Profile</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Help</a></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to('Settings', edit_user_registration_path) %></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to('Log Out', destroy_user_session_path, :method => :delete) %></li>
           </ul>
-          <li type="button" class="btn btn-primary navbar-btn">Twit</li>
+          
+          <li type="button" class="btn btn-primary navbar-btn">Add Post</li>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->

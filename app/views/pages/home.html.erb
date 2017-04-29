@@ -10,7 +10,7 @@
                     <div class="col-sm-2"><img src="/avatar.png" height="50px" width="50px" class="rounded-img home-avatar"></div>
                     <div class="col-sm-10"><h4 style="text-align: center;"><%= current_user.username %></h4></div>
                     <div class="col-sm-12" style="margin-top: 10px;">
-                        <div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">TWITS<br>
+                        <div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">POSTS<br>
                             <h6 style="color: #0084B4; font-size= 200%; opacity: 0.7;"><%= current_user.posts.count %></h6>
                         </div>
                         <div class="col-sm-6" style="font-size: 80%; opacity: 0.7;">FOLLOWERS<br>
@@ -44,7 +44,7 @@
                 <div class="panel-body row">
                     
                     <div class="col-sm-1">
-                        <img src="/avatar.png" class="rounded-img" height="50px" width="50px">
+                        <img src="/avatar.png" class="rounded-img" height="50px" width="50px"></img>
                     </div>
                     <div class="col-sm-11">
                         <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user_id).username %></a></span> <span class="post-creation"> - <%= @p.created_at.to_formatted_s(:short) %></span></p>
